@@ -22,7 +22,7 @@ here I give the four examples how we could binding the data models durning our d
 
 More databinidng delteails , kinldy refer to： [UI5-data-binding](https://ui5.sap.com/#/topic/e5310932a71f42daa41f3a6143efca9c)
 
-![data-binding](/dimg/databinding.png)
+![data-binding](/img/databinding.png)
 
 ### 1. data model binding with JSON instance
    
