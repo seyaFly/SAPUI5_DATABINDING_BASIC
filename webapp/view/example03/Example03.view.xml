@@ -1,0 +1,40 @@
+<mvc:View
+	controllerName="onem.seya.databinding.controller.example03.Example03"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<Table items="{productPreload>/d}">
+		<columns>
+			<Column>
+				<Text text="ProductName"/>
+			</Column>
+			<Column>
+				<Text text="QuantityPerUnit"/>
+			</Column>
+			<Column>
+				<Text text="UnitPrice"/>
+			</Column>
+			<Column>
+				<Text text="UnitsInStock"/>
+			</Column>
+			<Column>
+				<Text text="Discontinued"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{productPreload>ProductName}"/>
+					<Text text="{productPreload>QuantityPerUnit}"/>
+					<Text text="{productPreload>UnitPrice}"/>
+					<Text text="{productPreload>UnitsInStock}"/>
+					<Text text="{productPreload>Discontinued}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>

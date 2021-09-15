@@ -1,0 +1,150 @@
+{
+    "_version": "1.21.0",
+    "sap.app": {
+        "id": "onem.seya.databinding",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "dataSources": {
+            "northwind": {
+                "uri": "/V2/Northwind/Northwind.svc",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "rootView": {
+            "viewName": "onem.seya.databinding.view.Main",
+            "type": "XML",
+            "async": true
+        },
+        "dependencies": {
+            "minUI5Version": "1.60.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "onem.seya.databinding.i18n.i18n"
+                }
+            },
+            "main": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/main/dataBindingList.json",
+                "preload": true
+            },
+            "productPreload": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/products.json",
+                "preload": true
+            },
+            "productOdata": {
+                "dataSource": "northwind",
+                "preload": true
+            }
+        },
+        "resources": {
+            "css": [{
+                "uri": "css/style.css"
+            }]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "onem.seya.databinding.view",
+                "controlId": "idAppControl",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [{
+                    "name": "Main",
+                    "pattern": "",
+                    "target": ["MainView"]
+                },
+                {
+                    "name": "bindingExample1",
+                    "pattern": "Example1",
+                    "target": ["Example1Target"]
+                },
+                {
+                    "name": "bindingExample2",
+                    "pattern": "Example2",
+                    "target": ["Example2Target"]
+                },
+                {
+                    "name": "bindingExample3",
+                    "pattern": "Example3",
+                    "target": ["Example3Target"]
+                },
+                {
+                    "name": "bindingExample4",
+                    "pattern": "Example4",
+                    "target": ["Example4Target"]
+                }
+            ],
+            "targets": {
+                "MainView": {
+                    "viewType": "XML",
+                    "viewLevel": 1,
+                    "viewName": "Main"
+                },
+                "Example1Target": {
+                    "viewType": "XML",
+                    "viewLevel": 1,
+                    "viewName": "example01/Example01"
+                },
+                "Example2Target": {
+                    "viewType": "XML",
+                    "viewLevel": 1,
+                    "viewName": "example02/Example02"
+                },
+
+                "Example3Target": {
+                    "viewType": "XML",
+                    "viewLevel": 1,
+                    "viewName": "example03/Example03"
+                },
+                "Example4Target": {
+                    "viewType": "XML",
+                    "viewLevel": 1,
+                    "viewName": "example04/Example04"
+                }
+            }
+        }
+    }
+}

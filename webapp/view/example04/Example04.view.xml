@@ -1,0 +1,46 @@
+<mvc:View
+	controllerName="onem.seya.databinding.controller.example04.Example04"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<Page>
+		<Table
+			items="{productOdata>/Products}"
+			contextualWidth="Auto"
+			growing="true"
+		>
+			<columns>
+				<Column>
+					<Text text="ProductName"/>
+				</Column>
+				<Column>
+					<Text text="QuantityPerUnit"/>
+				</Column>
+				<Column>
+					<Text text="UnitPrice"/>
+				</Column>
+				<Column>
+					<Text text="UnitsInStock"/>
+				</Column>
+				<Column>
+					<Text text="Discontinued"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{productOdata>ProductName}"/>
+						<Text text="{productOdata>QuantityPerUnit}"/>
+						<Text text="{productOdata>UnitPrice}"/>
+						<Text text="{productOdata>UnitsInStock}"/>
+						<Text text="{productOdata>Discontinued}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

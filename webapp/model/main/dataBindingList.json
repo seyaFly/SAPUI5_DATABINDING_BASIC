@@ -1,0 +1,19 @@
+{
+    "bindingCollection": [{
+            "id": 1,
+            "description": "data-binding example 1: intialize data binding in view level with json instance"
+        },
+        {
+            "id": 2,
+            "description": "data-binding example 2: intialize data binding in view level with json file"
+        },
+        {
+            "id": 3,
+            "description": "data-binding example 3: initial data binding via the component configuration"
+        },
+        {
+            "id": 4,
+            "description": "data-binding example 4: initialize the odata service data binding via proxy "
+        }
+    ]
+}
